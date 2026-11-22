@@ -26,6 +26,7 @@ const germanTranslations={
   "Case studies": "Fallstudien",
   "About": "Über mich",
   "Contact": "Kontakt",
+  "Certifications": "Zertifizierungen",
   "Explore case studies": "Fallstudien entdecken",
   "Hi, I’m Eslam Mosbah.": "Hallo, ich bin Eslam Mosbah.",
   "Three steps. One constant question: why?": "Drei Schritte. Eine ständige Frage: Warum?",
