@@ -91,30 +91,38 @@ const translations={
   "وضعتُ الفكرة ووجّهتُ بحث العملاء وفرق الفيديو لتحويل خمس مشكلات متكررة إلى قصص توضّح حلول المنتج.": "I developed the concept and directed customer research and video teams, turning five recurring problems into stories that demonstrated product solutions.",
   "نمو المبيعات المبلغ عنه 30٪ في العام التالي للحملة.": "Reported sales growth of 30% in the year following the campaign."
 };
+
 let language='en';let contactState='idle';
 const textPairs=[];const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let textNode;
-while(textNode=walker.nextNode()){if(['SCRIPT','STYLE'].includes(textNode.parentElement.tagName))continue;const key=textNode.textContent.trim();if(translations[key])textPairs.push({node:textNode,ar:textNode.textContent,en:textNode.textContent.replace(key,translations[key])});}
-function setLanguage(next){language=next;document.documentElement.lang=next;document.documentElement.dir=next==='ar'?'rtl':'ltr';textPairs.forEach(x=>x.node.textContent=x[next]);document.title=next==='en'?'Eslam Mosbah | Account Manager & Meta Ads Specialist':'إسلام مصباح | إدارة الحسابات وإعلانات Meta';const b=document.getElementById('languageSwitch');b.textContent=next==='en'?'العربية':'English';b.lang=next==='en'?'ar':'en';b.setAttribute('aria-label',next==='en'?'التبديل إلى العربية':'Switch to English');document.querySelector('nav').setAttribute('aria-label',next==='en'?'Main navigation':'التنقل الرئيسي');document.querySelector('.art').setAttribute('aria-label',next==='en'?'Campaign strategy approach':'نهج استراتيجية الحملات');document.querySelectorAll('.featured-case img').forEach((img,i)=>img.alt=(next==='en'?['Illustration of jewelry in everyday life','Sales campaign results with client details blurred','Purchase Event Match Quality evidence']:['تصور توضيحي للمجوهرات في الحياة اليومية','نتائج حملات المبيعات بعد تمويه بيانات العميل','توثيق جودة مطابقة حدث الشراء'])[i]);
-const languageUrl=new URL(location.href);if(next==='ar')languageUrl.searchParams.set('lang','ar');else languageUrl.searchParams.delete('lang');history.replaceState(null,'',languageUrl.pathname+languageUrl.search+languageUrl.hash);
-document.querySelectorAll('.featured-case').forEach(card => {
- const caseUrl = new URL(card.href);
- if (next === 'ar') caseUrl.searchParams.set('lang', 'ar');
- else caseUrl.searchParams.delete('lang');
- card.href = caseUrl.href;
-});
-renderContactState();
+while(textNode=walker.nextNode()){
+ if(['SCRIPT','STYLE'].includes(textNode.parentElement.tagName))continue;
+ const key=textNode.textContent.trim();
+ if(germanTranslations[key])textPairs.push({node:textNode,en:textNode.textContent,de:textNode.textContent.replace(key,germanTranslations[key])});
 }
-document.getElementById('languageSwitch').onclick=()=>setLanguage(language==='en'?'ar':'en');setLanguage(new URLSearchParams(location.search).get('lang')==='ar'?'ar':'en');
-
+function setLanguage(next){
+ language=next==='de'?'de':'en';
+ document.documentElement.lang=language;document.documentElement.dir='ltr';
+ textPairs.forEach(x=>x.node.textContent=x[language]);
+ document.title=language==='de'?'Eslam Mosbah | Account Manager und Meta Ads Specialist':'Eslam Mosbah | Account Manager & Meta Ads Specialist';
+ const b=document.getElementById('languageSwitch');b.textContent=language==='en'?'Deutsch':'English';b.lang=language==='en'?'de':'en';b.setAttribute('aria-label',language==='en'?'Switch to German':'Zu Englisch wechseln');
+ document.querySelector('nav').setAttribute('aria-label',language==='de'?'Hauptnavigation':'Main navigation');
+ document.querySelector('.art').setAttribute('aria-label',language==='de'?'Ansatz zur Kampagnenstrategie':'Campaign strategy approach');
+ const languageUrl=new URL(location.href);if(language==='de')languageUrl.searchParams.set('lang','de');else languageUrl.searchParams.delete('lang');history.replaceState(null,'',languageUrl.pathname+languageUrl.search+languageUrl.hash);
+ document.querySelectorAll('.featured-case').forEach(card=>{const u=new URL(card.href);if(language==='de')u.searchParams.set('lang','de');else u.searchParams.delete('lang');card.href=u.href;});
+ document.querySelectorAll('a[href]').forEach(a=>{const u=new URL(a.href,location.href);if(u.origin!==location.origin||!u.hash||a.classList.contains('featured-case'))return;if(language==='de')u.searchParams.set('lang','de');else u.searchParams.delete('lang');a.href=u.href;});
+ renderContactState();
+}
 function renderContactState(){
  const button=document.querySelector('#contactForm button[type="submit"]');
  const ready=Boolean(document.getElementById('web3AccessKey').value.trim());
  button.disabled=!ready||contactState==='sending';
- button.textContent=contactState==='sending'?(language==='ar'?'جارٍ الإرسال…':'Sending…'):(language==='ar'?'إرسال الرسالة':'Send message');
+ button.textContent=contactState==='sending'?(language==='de'?'Wird gesendet…':'Sending…'):(language==='de'?'Nachricht senden':'Send message');
  document.getElementById('contactSetupNote').hidden=ready;
  const status=document.getElementById('contactStatus');status.hidden=!['success','error'].includes(contactState);
- status.textContent=contactState==='success'?(language==='ar'?'تم استلام رسالتك. شكرًا لتواصلك.':'Your message has been accepted. Thank you for getting in touch.'):contactState==='error'?(language==='ar'?'تعذّر تأكيد إرسال رسالتك. احتفظنا بالنص؛ يمكنك المحاولة لاحقًا أو التواصل عبر LinkedIn.':'We couldn’t confirm your message was sent. Your text has been kept; please try later or connect on LinkedIn.') : '';
+ status.textContent=contactState==='success'?(language==='de'?'Ihre Nachricht wurde angenommen. Vielen Dank für Ihre Kontaktaufnahme.':'Your message has been accepted. Thank you for getting in touch.'):contactState==='error'?(language==='de'?'Der Versand konnte nicht bestätigt werden. Ihr Text bleibt erhalten. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich über LinkedIn.':'We couldn’t confirm your message was sent. Your text has been kept; please try later or connect on LinkedIn.'):'';
 }
+document.getElementById('languageSwitch').onclick=()=>setLanguage(language==='en'?'de':'en');
+setLanguage(new URLSearchParams(location.search).get('lang'));
 document.getElementById('contactForm').addEventListener('submit',async event=>{
  event.preventDefault();const form=event.currentTarget;
  if(!form.reportValidity()||!document.getElementById('web3AccessKey').value.trim()||contactState==='sending')return;

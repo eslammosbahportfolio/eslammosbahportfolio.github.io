@@ -7,12 +7,12 @@
 <meta name="description" content="A UK university recruitment case study with approximately 70% higher enquiry-to-paid-enrolment conversion and 40% lower cost per paid enrolment.">
 <link rel="stylesheet" href="theme.css?v=205c03bab0">
 </head>
-<body>
+<body data-title-en="Student recruitment case study | Eslam Mosbah" data-title-de="Von Studienanfragen zu gebuchten Studienplätzen | Eslam Mosbah">
 <header>
 <a class="brand" href="index.html">Eslam Mosbah<span>●</span></a>
 <nav>
 <a class="back-link" href="index.html#work">← All case studies</a>
-<button class="filter" id="caseLang" type="button" lang="ar" aria-label="التبديل إلى العربية">العربية</button>
+<button class="filter" id="caseLang" type="button" aria-label="التبديل إلى العربية" lang="de" aria-label="Switch to German">Deutsch</button>
 </nav>
 </header>
 <main>
@@ -54,6 +54,46 @@
 <img src="assets/education-campaign-results-redacted.png" alt="Meta Ads Manager table showing website leads and cost per lead by campaign, with campaign names and dates blurred" loading="lazy">
 </a>
 <figcaption>Meta Ads Manager snapshot showing website leads and cost per lead for the campaigns shown.</figcaption>
+</figure>
+</section>
+</article><article class="case-content" id="de" lang="de" hidden="hidden">
+<div class="eyebrow">FALLSTUDIE · HOCHSCHULBILDUNG UND FIRMENWEITERBILDUNG · ANONYMISIERTER KUNDE</div>
+<h1>Von Studienanfragen zu gebuchten Studienplätzen</h1>
+<div class="facts">
+<span>Rekrutierungsmarkt <b>Vereinigte Arabische Emirate</b></span>
+<span>Studienziel <b>Vereinigtes Königreich</b></span>
+<span>Meine Rolle <b>Leadgenerierungsstrategie und Kampagnenumsetzung</b></span>
+</div>
+<section>
+<h2>Die Herausforderung</h2>
+<p>Ein Kunde in den Vereinigten Arabischen Emiraten gewann Studierende für eine britische Universität und vermarktete kurze Weiterbildungsprogramme an Unternehmen. Seine Meta Instant Forms erzeugten viele Studienanfragen, doch nur wenige führten zu kostenpflichtigen Einschreibungen. Studierende und Firmenkunden durchliefen einen ähnlichen Prozess, obwohl sie unterschiedliche Informationen für ihre Entscheidung benötigten.</p>
+</section>
+<section>
+<h2>Meine Rolle</h2>
+<p>Ich leitete die Neugestaltung und Umsetzung der Leadgenerierungsstrategie des Kontos. Ich prüfte die Erfassung und Nachverfolgung der Anfragen, einschließlich des Einsatzes von Meta Instant Forms und der Rolle des CRM. Auf Basis des erwarteten Werts der Studienabschlüsse und des Follow-up-Prozesses für Firmenkunden änderten wir die <b>Budgetverteilung von 50/50 auf 70 % für die Studierendengewinnung und 30 % für Firmenweiterbildung</b>.</p>
+</section>
+<section>
+<h2>Studierendengewinnung</h2>
+<p>Wir erstellten <b>fünf studiengangspezifische Landingpages</b> und kombinierten jede mit passenden Anzeigen. Studieninteressierte und ihre Familien konnten sich vor der Anfrage gezielter über den Studiengang informieren.</p>
+<p>Wir nutzten <b>User-generated Content (UGC) als Social Proof</b>, damit Studieninteressierte und ihre Familien Erfahrungen direkt von Studierenden der Universität hörten. Diese nahmen Videos über ihre Erlebnisse und die durch das Studium eröffneten Möglichkeiten auf und teilten sie auf ihren eigenen Accounts. Ausgewählte Videos setzten wir in Meta-Anzeigen ein und griffen die Geschichten in Social-Media-Beiträgen auf.</p>
+<p>Zusätzlich nutzten wir detailliertes Targeting und verfassten Anzeigen für Eltern und Erziehungsberechtigte, die häufig eine zentrale Rolle bei der Finanzierung des Studiums in Großbritannien spielten.</p>
+</section>
+<section>
+<h2>Firmenweiterbildung</h2>
+<p>Mit bezahlten Anzeigen erreichten wir neue Firmenkontakte und luden sie zu einem <b>kostenlosen monatlichen Webinar</b> ein. Verantwortliche für Personal und Personalentwicklung konnten erfahren, was die Programme vermittelten und wie die Weiterbildung ihre Teams unterstützen konnte.</p>
+<p>Wir führten die Gespräche mit personalisierten E-Mails fort. Unternehmen, die bereits einen Kurs besucht hatten, empfahlen wir ein verwandtes Programm oder den nächsten Kurs im Lernpfad.</p>
+</section>
+<section>
+<h2>Ergebnisse</h2>
+<p>Die <b>Conversion-Rate von Anfragen zu kostenpflichtigen Einschreibungen stieg um etwa 70 %</b>, und die <b>Kosten pro kostenpflichtiger Einschreibung sanken um 40 %</b>. Zudem gingen Anfragen von Eltern für ihre Kinder ein. So erreichten wir die an der Finanzierungsentscheidung beteiligten Personen direkt.</p>
+</section>
+<section>
+<h2>Kampagnennachweis</h2>
+<figure>
+<a href="assets/education-campaign-results-redacted.png" target="_blank" rel="noopener">
+<img src="assets/education-campaign-results-redacted.png" alt="Kampagnennachweis mit unkenntlich gemachten Kundendaten" loading="lazy">
+</a>
+<figcaption>Aufnahme aus dem Meta Ads Manager mit Website-Leads und Kosten pro Lead der dargestellten Kampagnen.</figcaption>
 </figure>
 </section>
 </article>
@@ -100,37 +140,6 @@
 </article>
 </main>
 <footer><span id="foot">Eslam Mosbah / Marketing portfolio</span><span>2026</span></footer>
-<script>
-const toggle = document.getElementById('caseLang');
-const back = document.querySelector('.back-link');
-const brand = document.querySelector('.brand');
-const footer = document.getElementById('foot');
-
-function setCaseLanguage(language) {
-  const arabic = language === 'ar';
-  document.documentElement.lang = language;
-  document.documentElement.dir = arabic ? 'rtl' : 'ltr';
-  document.getElementById('en').hidden = arabic;
-  document.getElementById('ar').hidden = !arabic;
-  toggle.textContent = arabic ? 'English' : 'العربية';
-  toggle.lang = arabic ? 'en' : 'ar';
-  toggle.setAttribute('aria-label', arabic ? 'Switch to English' : 'التبديل إلى العربية');
-  const name = arabic ? 'إسلام مصباح' : 'Eslam Mosbah';
-  brand.firstChild.textContent = name;
-  brand.href = arabic ? 'index.html?lang=ar' : 'index.html';
-  back.textContent = arabic ? 'جميع دراسات الحالة →' : '← All case studies';
-  back.href = brand.getAttribute('href') + '#work';
-  footer.textContent = name + (arabic ? ' / بورتفوليو تسويقي' : ' / Marketing portfolio');
-  document.title = arabic ? 'دراسة حالة استقطاب الطلاب | إسلام مصباح' : 'Student recruitment case study | Eslam Mosbah';
-  const url = new URL(location.href);
-  if (arabic) url.searchParams.set('lang', 'ar');
-  else url.searchParams.delete('lang');
-  history.replaceState(null, '', url);
-}
-toggle.addEventListener('click', () => {
-  setCaseLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar');
-});
-setCaseLanguage(new URLSearchParams(location.search).get('lang') === 'ar' ? 'ar' : 'en');
-</script>
+<script src="case-languages.js?v=317f58d99b"></script>
 </body>
 </html>
