@@ -97,5 +97,20 @@ const germanTranslations={
   "Website + 13 branches": "Website + 13 Filialen",
   "UGC / LANDING PAGES / EMAIL": "UGC / LANDINGPAGES / E-MAIL",
   "≈1,000": "≈1.000",
-  "8.5/10": "8,5/10"
+  "8.5/10": "8,5/10",
+  "Certifications & continued learning": "Zertifizierungen und Weiterbildung",
+  "Professional credentials. Continued learning.": "Zertifizierungen und kontinuierliches Lernen.",
+  "Selected certifications and completed learning programmes in marketing, advertising and AI.": "Ausgewählte Zertifizierungen und abgeschlossene Lernprogramme in Marketing, Werbung und KI.",
+  "Select a certificate to view the original.": "Wählen Sie einen Nachweis aus, um das Original anzusehen.",
+  "Digital Marketing": "Digitales Marketing",
+  "Email Marketing Professional": "Professionelles E-Mail-Marketing",
+  "LinkedIn Marketing": "LinkedIn-Marketing",
+  "Cold List Email Strategy": "E-Mail-Strategie für inaktive Kontakte",
+  "Email & Newsletter Foundations": "Grundlagen für E-Mail und Newsletter",
+  "Generative AI Workflows": "Workflows mit generativer KI",
+  "Generative AI Basics": "Grundlagen generativer KI",
+  "Large Language Models": "Große Sprachmodelle",
+  "Meta · Professional certification": "Meta · Berufliche Zertifizierung",
+  "Google · Certification": "Google · Zertifizierung",
+  "LinkedIn Learning · Learning path": "LinkedIn Learning · Lernpfad"
 };
