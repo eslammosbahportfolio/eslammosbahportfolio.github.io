@@ -26,6 +26,7 @@ const germanTranslations={
   "Case studies": "Fallstudien",
   "About": "Über mich",
   "Contact": "Kontakt",
+  "Explore my film & photography portfolio": "Mein Portfolio für Film und Fotografie ansehen",
   "Certifications": "Zertifizierungen",
   "Explore case studies": "Fallstudien entdecken",
   "Hi, I’m Eslam Mosbah.": "Hallo, ich bin Eslam Mosbah.",
