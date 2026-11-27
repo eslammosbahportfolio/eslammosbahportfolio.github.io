@@ -1,4 +1,9 @@
 const germanTranslations={
+  "About me": "Über mich",
+  "For nearly six years, I worked as an Account Manager on the Meta project at Concentrix, helping advertisers plan, build and improve their Meta campaigns.": "Fast sechs Jahre lang habe ich als Account Manager im Meta-Projekt bei Concentrix gearbeitet und Werbetreibende dabei unterstützt, ihre Meta-Kampagnen zu planen, aufzusetzen und zu optimieren.",
+  "I bring a filmmaker’s eye to performance marketing, using audience insights to shape creative ideas and campaign data to decide what to test next.": "Als Filmemacher bringe ich einen kreativen Blick ins Performance-Marketing ein. Erkenntnisse über die Zielgruppe prägen meine Ideen, und Kampagnendaten zeigen mir, was ich als Nächstes testen sollte.",
+  "Hundreds of ad accounts analyzed": "Hunderte Werbekonten analysiert",
+  "~1,000 campaigns built or co-built": "Rund 1.000 Kampagnen aufgebaut oder mitentwickelt",
   "From Saudi Arabia to Egypt": "Von Saudi-Arabien nach Ägypten",
   "CASE STUDY / E-COMMERCE / MARKET ENTRY": "FALLSTUDIE / E-COMMERCE / MARKTEINTRITT",
   "From Saudi Arabia to Egypt: a localized market-entry strategy": "Von Saudi-Arabien nach Ägypten: eine lokalisierte Markteintrittsstrategie",

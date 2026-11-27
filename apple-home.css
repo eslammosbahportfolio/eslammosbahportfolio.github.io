@@ -1,0 +1,138 @@
+.apple-home {
+  --bg: #f8f9fc;
+  --panel: #fff;
+  --ink: #181b20;
+  --muted: #495463;
+  --accent: #1d4779;
+  --pale: #1d4779;
+  --line: #dce1eb;
+  --font: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color-scheme: light;
+  font-optical-sizing: auto;
+  background: radial-gradient(ellipse 70% 36rem at 50% 4%, #e4edf9, transparent 100%), var(--bg);
+}
+.apple-home header {
+  width: min(calc(100% - 2rem), 76rem);
+  border-radius: 2rem;
+  border: 1px solid #fff;
+  background: #ffffffd6;
+  backdrop-filter: blur(22px) saturate(145%);
+  box-shadow: 0 8px 36px #26345514;
+}
+.apple-home .hero { display: flex; flex-direction: column; text-align: center; gap: 2.6rem; padding: clamp(3.5rem, 8vw, 7rem) 0 clamp(2rem, 5vw, 4.5rem); }
+.apple-home .hero > div:first-child { width: 100%; }
+.apple-home .hero h1 {
+  max-width: none;
+  margin: .85rem auto 1.35rem;
+  color: var(--ink);
+  background: none;
+  font-size: clamp(2.5rem, 8.6vw, 7.2rem);
+  line-height: .98;
+  font-weight: 720;
+  letter-spacing: -.055em;
+}
+.apple-home .hero h1 em { color: var(--accent); }
+.apple-home .hero .intro { max-width: 36rem; margin: 0 auto 1.5rem; font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.55; }
+.apple-home .hero .art { width: min(100%, 48rem); overflow: hidden; border-radius: 1.75rem; box-shadow: 0 20px 55px #20314b24; }
+.apple-home .cta { background: var(--accent); color: white; border-radius: 99rem; }
+.apple-home .cv-link, .apple-home .linkedin-link { color: var(--accent); }
+.apple-home .filter { background: var(--panel); color: var(--ink); }
+.apple-home .eyebrow, .apple-home .brand span { color: var(--accent); }
+.apple-home .tagline { text-align: center; margin: auto; padding: clamp(2.5rem, 6vw, 5rem) 0; }
+.apple-home .tagline-word { opacity: 1; }
+.apple-home h2 { letter-spacing: -.045em; }
+.apple-home #work .sectionhead { margin-bottom: 1rem; }
+.apple-home #work .featured-case, .apple-home .about, .apple-home .step,
+.apple-home #contactForm, .apple-home .credential-card {
+  background: var(--panel);
+  border-color: var(--line);
+  border-radius: 1.45rem;
+}
+.apple-home #work .featured-case:hover, .apple-home .credential-card:hover { background: #edf3fb; }
+.apple-home #work .featured-case h3 { margin: .5rem 0 .8rem; }
+.apple-home #work .case-carousel-controls button:not(:disabled):hover { background: #e1ebfa; }
+.apple-home #work .case-carousel { scrollbar-color: #8093af #e8edf5; }
+.apple-home .reveal { opacity: 1; transform: none; }
+.apple-home .about a:not(.cta), .apple-home .contact a:not(.cta) { color: var(--accent); }
+.apple-home input:not([type=hidden]), .apple-home textarea {
+  color: var(--ink);
+  background: var(--bg);
+  border-color: var(--line);
+}
+.apple-home #contactStatus { background: #e9eff9; color: var(--ink); }
+.apple-home .menu-toggle { background: #e9eff9; border-color: var(--line); }
+.apple-home .menu-toggle span { background: var(--ink); }
+@media (max-width: 800px) {
+  .apple-home header nav { background: #f8f9fcf5; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .apple-home header.menu-open nav > a { animation: none; }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .apple-home header, .apple-home header nav { background: white; backdrop-filter: none; }
+}
+.apple-home #work .case-carousel .case-poster iframe { pointer-events: auto; }
+.apple-home #work .case-carousel .read-case { color: var(--accent); }
+.apple-home .hero .motion-art { aspect-ratio: 1.45; }
+@media (max-width: 700px) {
+  .apple-home header:not(.menu-open) nav { display: none; }
+  .apple-home header.menu-open nav {
+    height: auto;
+    max-height: calc(100dvh - 6rem);
+    overflow-y: auto;
+    border-radius: 1.4rem;
+    background: #f8f9fc;
+  }
+  .apple-home .hero .motion-art { aspect-ratio: 1; }
+}
+.apple-home .credential-spotlight { max-width: 40rem; margin-bottom: 2.25rem; }
+.apple-home .credential-featured .credential-image { height: clamp(6rem, 14vw, 11rem); }
+.apple-home .credential-controls { display: flex; justify-content: flex-end; gap: .5rem; padding-inline: .4rem; margin-bottom: .6rem; }
+.apple-home .credential-controls button:not(:disabled):hover { background: #e1ebfa; }
+.apple-home .credential-grid {
+  max-width: none;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(10.5rem, 25%, 17rem);
+  gap: .8rem;
+  overflow-x: auto;
+  padding: .4rem .4rem .9rem;
+  scroll-padding-inline: .4rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #8093af #e8edf5;
+}
+.apple-home .credential-grid .credential-card { scroll-snap-align: start; }
+.apple-home .credential-grid .credential-image { height: 7rem; }
+@media (max-width: 500px) {
+  .apple-home .credential-grid { grid-auto-columns: 76%; }
+}
+.apple-home .motion-feature { width: min(100%, 43rem); }
+.apple-home .hero .motion-feature .motion-art {
+  width: 100%;
+  height: clamp(13rem, 39vw, 22rem);
+  aspect-ratio: auto;
+}
+.apple-home .motion-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: .2rem .65rem;
+  margin: .95rem 0 0;
+  color: var(--ink);
+  font-size: clamp(.9rem, 2vw, 1.03rem);
+  font-weight: 620;
+  line-height: 1.45;
+}
+.apple-home .about { grid-template-columns: minmax(9rem, .65fr) minmax(0, 1.35fr); }
+.apple-home .about-links { display: flex; flex-wrap: wrap; gap: .35rem 1rem; }
+.apple-home .about-links p { margin: 0; }
+@media (max-width: 700px) {
+  .apple-home .about { grid-template-columns: minmax(0,1fr); gap: .75rem; }
+  .apple-home .about h2 { margin-bottom: .4rem; }
+}
+@media (max-width: 560px) {
+  .apple-home .motion-metrics { flex-direction: column; align-items: center; }
+  .apple-home .metrics-divider { display: none; }
+}
